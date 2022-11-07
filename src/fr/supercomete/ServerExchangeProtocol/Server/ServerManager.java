@@ -1,17 +1,16 @@
 package fr.supercomete.ServerExchangeProtocol.Server;
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Random;
-
-import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
-import org.bukkit.plugin.Plugin;
 
 import com.google.common.collect.Iterables;
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
-
 import fr.supercomete.ServerExchangeProtocol.Rank.Rank;
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
+import org.bukkit.plugin.Plugin;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Random;
 
 public class ServerManager {
 	public static ArrayList<Server> ServerList = new ArrayList<Server>();
