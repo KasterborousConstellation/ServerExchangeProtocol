@@ -91,7 +91,7 @@ public class PlayerAccount {
 	}
 
 	public String getRankColor() {
-		return "§"+rankColor;
+		return "ï¿½"+rankColor;
 	}
 
 	public void setRankColor(String rankColor) {

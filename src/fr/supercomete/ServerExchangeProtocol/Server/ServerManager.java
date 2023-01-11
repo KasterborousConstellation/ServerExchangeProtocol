@@ -1,6 +1,7 @@
 package fr.supercomete.ServerExchangeProtocol.Server;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 import org.bukkit.Bukkit;
@@ -15,12 +16,6 @@ import fr.supercomete.ServerExchangeProtocol.Rank.Rank;
 
 public class ServerManager {
 	public static ArrayList<Server> ServerList = new ArrayList<Server>();
-//	public static void updateServer(String[] servers) {
-////		for(String serv : servers) {
-////				Main.plc.get(null,getCurrentPluginServer().getServername(), serv);	
-////		}
-//		
-//	}
 	public static Server getRandomHub() {
 		ArrayList<Server> hublist= new ArrayList<Server>();
 		for(Server s : ServerList) {
@@ -86,9 +81,7 @@ public class ServerManager {
 		ArrayList<Rank> ranks = new ArrayList<Rank>();
 		for(Server s : ServerManager.ServerList) {
 			if(s.getServername().equalsIgnoreCase(servername)) {
-				for(Rank rank : s.getNeededrank()) {
-					ranks.add(rank);
-				}
+				ranks.addAll(Arrays.asList(s.getNeededrank()));
 			}
 		}
 		return ranks;

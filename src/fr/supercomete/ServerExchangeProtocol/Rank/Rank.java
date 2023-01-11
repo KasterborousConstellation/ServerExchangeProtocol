@@ -3,7 +3,7 @@ package fr.supercomete.ServerExchangeProtocol.Rank;
 public enum Rank {
 	Joueur("Joueur","f","PAPER",0,"Simple Joueur"),
 	Survivor("Guest","e","SUGAR_CANE",1,"Grade exclusif aux amis"),
-	Host("Host","c","GOLDEN_APPLE",2,"Grade permettant de créer des hosts"),
+	Host("Host","c","GOLDEN_APPLE",2,"Grade permettant de crÃ©er des hosts"),
 	Admin("Admin","4","COMMAND",3,"Grade administrateur")
 	;
 	
