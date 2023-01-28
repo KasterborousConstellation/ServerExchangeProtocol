@@ -1,17 +1,19 @@
 package fr.supercomete.ServerExchangeProtocol.Rank;
 
+import org.bukkit.ChatColor;
+
 public enum Rank {
-	Joueur("Joueur","f","PAPER",0,"Simple Joueur"),
-	Survivor("Guest","e","SUGAR_CANE",1,"Grade exclusif aux amis"),
-	Host("Host","c","GOLDEN_APPLE",2,"Grade permettant de créer des hosts"),
-	Admin("Admin","4","COMMAND",3,"Grade administrateur")
+	Joueur("Joueur", ChatColor.WHITE,"PAPER",0,"Simple Joueur"),
+	Survivor("Guest",ChatColor.GREEN,"SUGAR_CANE",1,"Grade exclusif aux amis"),
+	Host("Host",ChatColor.RED,"GOLDEN_APPLE",2,"Grade permettant de créer des hosts"),
+	Admin("Admin",ChatColor.DARK_RED,"COMMAND",3,"Grade administrateur")
 	;
 	
 	private String name;
-	private String rankcolor;
+	private ChatColor rankcolor;
 	private String mat;
 	private String desc;
-	Rank(String name,String rankColor,String mat,int priority,String desc){
+	Rank(String name,ChatColor rankColor,String mat,int priority,String desc){
 		this.name=name;
 		this.mat=mat;
 		this.rankcolor= rankColor;
@@ -23,7 +25,7 @@ public enum Rank {
 	public String getName() {
 		return name;
 	}
-	public String getRankcolor() {
+	public ChatColor getRankcolor() {
 		return rankcolor;
 	}
 	public String getDescription() {

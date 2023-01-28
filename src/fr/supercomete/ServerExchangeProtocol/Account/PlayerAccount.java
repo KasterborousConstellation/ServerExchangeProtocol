@@ -2,19 +2,21 @@ package fr.supercomete.ServerExchangeProtocol.Account;
 import java.util.UUID;
 import org.bukkit.Bukkit;
 import fr.supercomete.ServerExchangeProtocol.Rank.Rank;
+import org.bukkit.ChatColor;
+
 public class PlayerAccount {
 	private UUID owner;
 	private int level = 0;
 	private int exp = 0;
 	private Rank rank = Rank.Joueur;
-	private String rankColor = "f";
+	private ChatColor rankColor = ChatColor.WHITE;
 	private String username;
 	private int coins;
 	private int host;
 	private boolean chat=true;
 	private int TimePlayed;
 	private Rank[] unlockedRanks = {Rank.Joueur};
-	public PlayerAccount(UUID owner, int level, int exp,int coins, int host,Rank rank, String rankColor,int timePlayed,Rank[] unlockedranks,String Username) {
+	public PlayerAccount(UUID owner, int level, int exp,int coins, int host,Rank rank, ChatColor rankColor,int timePlayed,Rank[] unlockedranks,String Username) {
 		this.owner = owner;this.unlockedRanks = unlockedranks;	this.level = level;
 		this.exp = exp;this.rank = rank;this.rankColor = rankColor;
 		this.TimePlayed = timePlayed;this.coins=coins;this.host = host;
@@ -90,11 +92,11 @@ public class PlayerAccount {
 		TimePlayed = timePlayed;
 	}
 
-	public String getRankColor() {
-		return "�"+rankColor;
+	public ChatColor getRankColor() {
+		return rankColor;
 	}
 
-	public void setRankColor(String rankColor) {
+	public void setRankColor(ChatColor rankColor) {
 		this.rankColor = rankColor;
 	}
 	public int getCoins() {
