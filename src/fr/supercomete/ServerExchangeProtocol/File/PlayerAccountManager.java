@@ -31,6 +31,7 @@ public class PlayerAccountManager {
 		testfor(player);
 		String json = Fileutils.loadContent(file);
 		final PlayerAccount profile = profileSerializationManager.deserialize(json);
+		profile.setUsername(player.getName());
 		return profile;
 	}
 	public static PlayerAccount getPlayerAccount(String player) {

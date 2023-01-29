@@ -110,6 +110,9 @@ public class PlayerAccount {
 	public String getUser() {
 		return this.username;
 	}
+	public void setUsername(String username){
+		this.username=username;
+	}
 	/**
 	 * @return the chat
 	 */
