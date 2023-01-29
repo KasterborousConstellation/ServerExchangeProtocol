@@ -14,6 +14,7 @@ public class Server {
 	private Rank[] neededrank;
 	private ArrayList<String> players = new ArrayList<String>();
 	private ArrayList<ServerModifier> servermodifier= new ArrayList<ServerModifier>();
+	private ArrayList<String> desc;
 	public int getMaterial() {
 		return material;
 	}
@@ -45,9 +46,12 @@ public class Server {
 	public void setNeededrank(Rank[] neededrank) {
 		this.neededrank = neededrank;
 	}
-	public Server(String servername,int mat,int slot,String title,Rank[]neededrank) {
+	public Server(String servername,ArrayList<String>description,int mat,int slot,String title,Rank[]neededrank) {
 		super();
-		if(mat==-1)this.material=95;
+		if(mat==-1){
+			this.material=95;
+		}
+		desc=description;
 		this.servername = servername;
 		this.material=mat;
 		this.slot=slot;
@@ -81,5 +85,11 @@ public class Server {
 	}
 	public boolean hasModifier(ServerModifier modifier) {
 		return(this.servermodifier.contains(modifier));
+	}
+	public ArrayList<String> getDescription(){
+		return desc;
+	}
+	public void setDescription(ArrayList<String>description){
+		desc= description;
 	}
 }	

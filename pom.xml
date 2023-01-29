@@ -2,12 +2,17 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>ServerExchangeProtocol</groupId>
   <artifactId>ServerExchangeProtocol</artifactId>
-  <version>SNAPSHOT</version>
+  <version>1-SNAPSHOT</version>
   <name>SEP</name>
+  <properties>
+    <java.version>1.8</java.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
         <configuration>

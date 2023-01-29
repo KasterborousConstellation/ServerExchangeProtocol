@@ -1,8 +1,10 @@
 package fr.supercomete.ServerExchangeProtocol.Account;
 import java.util.UUID;
+
+import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
 import fr.supercomete.ServerExchangeProtocol.Rank.Rank;
-import org.bukkit.ChatColor;
+
 
 public class PlayerAccount {
 	private UUID owner;

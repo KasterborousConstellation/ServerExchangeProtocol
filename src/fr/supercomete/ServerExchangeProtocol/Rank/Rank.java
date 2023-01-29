@@ -1,6 +1,7 @@
 package fr.supercomete.ServerExchangeProtocol.Rank;
 
-import org.bukkit.ChatColor;
+
+import net.md_5.bungee.api.ChatColor;
 
 public enum Rank {
 	Joueur("Joueur", ChatColor.WHITE,"PAPER",0,"Simple Joueur"),
